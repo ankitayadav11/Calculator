@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script
+      src="https://kit.fontawesome.com/39827713ff.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="display">
+          <input type="text" id="subVal" disabled />
+          <input type="text" id="inputVal" value="0" />
+        </div>
+        <div class="buttons">
+          <button onclick="getValue('%')">%</button>
+          <button onclick="clearAll()">CE</button>
+          <button onclick="backSpace()">
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+          <button onclick="getValue('/')">/</button>
+          <button onclick="getValue('7')">7</button>
+          <button onclick="getValue('8')">8</button>
+          <button onclick="getValue('9')">9</button>
+          <button onclick="getValue('*')">x</button>
+          <button onclick="getValue('4')">4</button>
+          <button onclick="getValue('5')">5</button>
+          <button onclick="getValue('6')">6</button>
+          <button onclick="getValue('-')">-</button>
+          <button onclick="getValue('1')">1</button>
+          <button onclick="getValue('2')">2</button>
+          <button onclick="getValue('3')">3</button>
+          <button onclick="getValue('+')">+</button>
+          <button onclick="getValue('00')">00</button>
+          <button onclick="getValue('0')">0</button>
+          <button onclick="getValue('.')">.</button>
+          <button onclick="solve()">=</button>
+        </div>
+      </div>
+      <div class="history">
+        <div class="history-header">
+          <button class="history-button">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </button>
+          <h3 class="htext">
+            History <i class="fa-solid fa-clock-rotate-left"></i>
+          </h3>
+            <button onclick="clearHistory()">
+            <i class="fa-regular fa-trash-can"></i>
+            </button>
+        </div>
+        <div class="history-list" id="historyDiv">
+          <!-- History -->
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
